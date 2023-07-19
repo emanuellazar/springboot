@@ -1,0 +1,11 @@
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'edu.bbte.idde.leim2041'
+            artifactId = 'leim2041-backend'
+            version = '1.0.0-SNAPSHOT'
+
+            from components.java
+        }
+    }
+}

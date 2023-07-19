@@ -1,0 +1,7 @@
+daoType: jdbc
+user: root
+password: root
+database: advertisements
+url: localhost:3306
+poolSize: 5
+driver: com.mysql.cj.jdbc.Driver

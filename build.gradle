@@ -1,0 +1,30 @@
+allprojects {
+    group = 'edu.bbte.idde.leim2041'
+    version = '1.0-SNAPSHOT'
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'maven-publish'
+    apply from: "$rootDir/lint.gradle"
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+        runtimeOnly group: 'ch.qos.logback', name:'logback-classic', version:'1.2.3'
+        implementation group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+        annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+        runtimeOnly group: 'com.mysql', name: 'mysql-connector-j', version: '8.0.31'
+        implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: '2.14.0'
+        implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.13.4.2'
+        implementation group: 'com.zaxxer', name: 'HikariCP', version: '3.4.1'
+        implementation group: 'org.json', name: 'json', version: '20090211'
+    }
+}
+
